@@ -1,0 +1,6 @@
+$base-colours: (
+) !default;
+
+@function colour($name) {
+  @return map-get($base-colours, $name);
+}

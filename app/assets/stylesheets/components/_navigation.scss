@@ -1,0 +1,29 @@
+.c-navigation {
+
+}
+
+.c-navigation_logo {
+  display: block;
+}
+
+.c-navigation_logo img {
+  display: block;
+  height: 75px;
+  float: right;
+  margin-top: 2px;
+}
+
+.c-navigation_links {
+  padding: 30px;
+}
+
+.c-navigation_links a {
+  text-decoration: none !important;
+  color: 	#696969;
+  text-transform: uppercase;
+}
+
+.c-navigation_links a:hover {
+  color: black;
+  text-decoration: underline !important;
+}

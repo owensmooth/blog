@@ -1,0 +1,17 @@
+  .o-container {
+}
+
+.o-container_nav {
+  border-bottom: 2px solid #d4dadf;
+  height: 80px;
+}
+
+.o-container_content {
+  max-width: 1140px;
+  margin: 0 auto;
+  background-color: $body-color;
+}
+
+.o-container_content h1, h2 {
+  margin: 10px 0;
+}

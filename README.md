@@ -26,8 +26,9 @@ Things you may want to cover:
 
 # Install
 
-`1. Clone the repository
- 2. bundle install`
+ 1. Clone the repository
+
+ 2. `bundle install`
 
 # Start the app
 

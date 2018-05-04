@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <title>Owen Smooth Wuk Blog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,24 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class ='o-container'>
+      <div class='o-container_nav'>
+        <div class='c-navigation'>
+          <div class='c-navigation_logo'>
+            <%= image_tag('os-logo.png') %>
+            <div class='c-navigation_links'>
+              <%= link_to 'My Blog', controller: 'articles' %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='o-container_content'>
+        <div class='c-content'>
+          <div class='c-content_body'>
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
