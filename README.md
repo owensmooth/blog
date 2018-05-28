@@ -1,28 +1,11 @@
 # README
-<!-- This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ... -->
 
 # Procoders - Unit 1
+
+Basic Blog with minimal styling at the moment
+
+# Ruby version
+ `2.3.4`
 
 # Install
 
@@ -32,15 +15,18 @@ Things you may want to cover:
 
 # Start the app
 
-`rails server`
+ `rails server`
 
 # View the app
 
-`Go to localhost:3000 and the app will load`
+ `Go to localhost:3000 and the app will load`
 
 # Database
 
-`I am using postgresql for the database which can be viewed using postico
- 1. use postico to connect to the local database
- 2. make sure the elephant has localhost next to it if not click it and select localhost
- 3. the 2 databases are blog_development and blog_test`
+ 1. `db:create` or `db:migrate` to make the databases used for the blog including the test databases.
+
+ I am using postgresql for the database which can be viewed using postico
+ 1. use postico to connect to the local database, you may need to create the connection.
+ 2. if you need to create the connection just click edit or click new favourite. Make sure the `host` is `localhost` and the `database` is `postgres` then click connect.
+ 3. make sure the elephant has localhost next to it if not click it and select localhost
+ 4. the 2 databases are blog_development and blog_test which include tables for blog posts and comments.
