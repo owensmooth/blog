@@ -1,14 +1,10 @@
-class Admin::ArticlesController < ApplicationController
-
-  http_basic_authenticate_with name: "admin", password: "password",
-  except: [:index, :show]
-
+class Admin::ArticlesController < Admin::BaseController
+before_action :params_id, only: [:show, :edit]
   def index
     @articles = Article.all
   end
 
   def show
-    @article = Article.find(params[:id])
   end
 
   def new
@@ -16,7 +12,6 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def edit
-    @article = Article.find(params[:id])
   end
 
   def create
@@ -49,5 +44,9 @@ class Admin::ArticlesController < ApplicationController
   private
     def article_params
       params.require(:article).permit(:title, :text)
+    end
+
+    def params_id
+      @article = Article.find(params[:id])
     end
 end
