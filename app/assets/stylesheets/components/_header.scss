@@ -1,0 +1,20 @@
+.c-header_text {
+  padding: 50px;
+  text-align: center;
+
+  h1 {
+    color: colour(dark-grey);
+    font-size: 64px;
+    font-weight: 500;
+  }
+
+  h2 {
+    color: colour(light-grey);
+    font-size: 48px;
+    font-weight: 500;
+  }
+
+  h1, h2 {
+    margin: 0;
+  }
+}

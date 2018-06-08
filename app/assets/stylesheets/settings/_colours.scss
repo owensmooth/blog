@@ -1,4 +1,8 @@
 $base-colours: (
+  light-grey: #ABABAB,
+  greyy: #686868,
+  dark-grey: #474747,
+  background: #F2F2F2
 ) !default;
 
 @function colour($name) {

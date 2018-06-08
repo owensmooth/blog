@@ -1,0 +1,49 @@
+.c-article {
+  margin: 30px 20px;
+  text-align: center;
+  width: 100%;
+
+  &__table {
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  &__title {
+    display: block;
+    text-align: center;
+  }
+
+  &__text {
+    display: block;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  &__date {
+    display: block;
+    color: colour(light-grey);
+  }
+
+  &__link {
+    display: block;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__image {
+    display: block;
+    margin-top: 10px;
+  }
+
+  &__hero-image {
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+    height: 700px;
+  }
+}

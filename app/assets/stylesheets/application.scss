@@ -1,7 +1,11 @@
 @import 'settings/normalize.scss';
 @import 'settings/fonts.scss';
+@import 'settings/colours.scss';
 
 @import 'objects/containers.scss';
 
 @import 'components/typography.scss';
+@import 'components/header.scss';
 @import 'components/navigation.scss';
+@import 'components/articles.scss';
+@import 'components/comments.scss';
