@@ -2,14 +2,14 @@
 <div class='c-comments__form'>
     <p>
       <%= form.label :commenter %><br>
-      <%= form.text_field :commenter %>
+      <%= form.text_field :commenter, class: 'c-comments__form-input' %>
     </p>
     <p>
       <%= form.label :body %><br>
-      <%= form.text_area :body %>
+      <%= form.text_area :body, class: 'c-comments__form-body' %>
     </p>
     <p>
-      <%= form.submit %>
+      <%= form.submit class: 'c-comments__form-submit' %>
     </p>
   </div>
 <% end %>
