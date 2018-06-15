@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'articles/index'
+  get 'about/show'
 
   resources :articles, only: [:index, :show] do
     resources :comments
@@ -10,5 +11,4 @@ Rails.application.routes.draw do
   end
 
   root 'articles#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

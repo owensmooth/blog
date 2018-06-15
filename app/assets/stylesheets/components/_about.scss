@@ -1,0 +1,32 @@
+.c-about {
+  height: 100%;
+  max-width: 1400px;
+  text-align: center;
+
+  h1 {
+    color: colour(dark-grey);
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  &__image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    border: 5px solid colour(dark-grey);
+
+    img {
+      width: 300px;
+      position: absolute;
+      left: -100px;
+    }
+  }
+
+  &__content {
+    max-width: 900px;
+    margin: auto;
+  }
+}
