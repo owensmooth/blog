@@ -8,7 +8,7 @@ describe 'my special blog' do
   it 'displays a post on the site' do
     visit '/articles'
 
-    expect(page).to have_content('yoloswag')
+    expect(page).to have_content('YOLOSWAG')
   end
 
   context 'admin' do
@@ -29,7 +29,7 @@ describe 'my special blog' do
       click_button 'Create Article'
 
       expect(current_path).to eq("/articles/#{Article.last.id}")
-      expect(page).to have_content('Flappy')
+      expect(page).to have_content('FLAPPY')
     end
 
     it 'edits a blog post' do
@@ -46,7 +46,7 @@ describe 'my special blog' do
       click_button 'Update Article'
 
       expect(current_path).to eq("/articles/#{Article.last.id}")
-      expect(page).to have_content('Edited Post')
+      expect(page).to have_content('EDITED POST')
     end
   end
 end

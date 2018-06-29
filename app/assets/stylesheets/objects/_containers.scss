@@ -2,17 +2,17 @@
   background-color: colour(background);
   height: 100%;
 
-  &_header {
+  &__header {
     height: 200px;
     background-color: white;
   }
 
-  &_nav {
+  &__nav {
     background-color: white;
     height: 40px;
   }
 
-  &_content {
+  &__content {
     width: 100%;
     margin: 0 auto;
 
@@ -28,5 +28,11 @@
     width: 900px;
     overflow: hidden;
     border-radius: 4px;
+  }
+}
+
+@media (max-width: 767px) {
+  .o-container__article-hero {
+    display: none;
   }
 }

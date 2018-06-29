@@ -1,31 +1,109 @@
 .c-navigation {
-  &_logo {
-    display: block;
-    margin-left: 10px;
+    overflow: auto;
+    width: 100vw;
+    left: -110%;
+    background-color: colour(dark-grey);
+    position: absolute;
+    z-index: 999;
+    transition: left 0.25s;
+    margin: 0;
+    top: 240px;
+
+  &__logo {
+    display: none;
   }
 
-  &_logo img {
+  &__links {
     display: block;
-    height: 24px;
-    float: left;
-    margin-top: 2px;
-    margin: 10px 5px;
-  }
+    color: white;
 
-  &_links {
-    font-size: 16px;
-    text-align: right;
-    padding: 15px 0;
-    color: black;
     a {
+      color: white;
       text-decoration: none !important;
-      color: black;
       text-transform: uppercase;
-      margin-right: 20px;
     }
-    a:hover {
-      color: colour(light-grey);
 
+    li {
+      display: block;
+      list-style: none;
+      text-align: center;
+      padding: 5px;
     }
   }
+
+  &__hamburger {
+    display: block;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg') no-repeat center center;
+    text-indent: -200%;
+    width: 37px;
+    height: 37px;
+    float: left;
+    color: black;
+  }
+
+  &__checkbox {
+    float: right;
+    display: block;
+    visibility: hidden;
+  }
+
+  &__checkbox:checked~.c-navigation {
+    left: 0%;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .c-navigation {
+    left: 0;
+    background-color: white;
+    top: 0;
+
+    &__logo {
+      display: block;
+      margin-left: 10px;
+    }
+
+    &__logo img {
+      display: block;
+      height: 24px;
+      float: left;
+      margin: 10px 5px;
+    }
+
+    &__links {
+      display: block;
+      font-size: 16px;
+      text-align: right;
+      padding: 15px 0;
+
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+       display: inline-block;
+     }
+
+      a {
+        color: black;
+        margin-right: 20px;
+      }
+
+      a:hover {
+        color: colour(light-grey);
+      }
+    }
+
+    &__checkbox {
+      display: none;
+      margin: 10px;
+    }
+
+    &__hamburger {
+      display: none;
+    }
+  }
+
 }
