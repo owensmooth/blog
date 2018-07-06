@@ -1,5 +1,5 @@
 class Admin::ArticlesController < Admin::BaseController
-before_action :params_id, only: [:show, :edit]
+  before_action :params_id, only: [:show, :edit]
   def index
     @articles = Article.all
   end

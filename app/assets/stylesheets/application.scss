@@ -1,5 +1,8 @@
 // Utils
 @import 'utils/mq.scss';
+@import 'utils/bootstrap.min.scss';
+@import 'utils/animate.scss';
+
 
 // Settings
 @import 'settings/normalize.scss';
@@ -17,3 +20,4 @@
 @import 'components/articles.scss';
 @import 'components/comments.scss';
 @import 'components/about.scss';
+@import 'components/admin.scss';
