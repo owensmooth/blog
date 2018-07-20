@@ -1,7 +1,17 @@
-@import 'settings/normalize.scss';
-@import 'settings/fonts.scss';
+// Utils
 
-@import 'objects/containers.scss';
+// Settings
+@import "settings/normalize.scss";
+@import "settings/fonts.scss";
+@import "settings/colours.scss";
+@import "settings/typography.scss";
 
-@import 'components/typography.scss';
-@import 'components/navigation.scss';
+// Objects
+@import "objects/containers.scss";
+
+// Components
+@import "components/header.scss";
+@import "components/navigation.scss";
+@import "components/articles.scss";
+@import "components/comments.scss";
+@import "components/about.scss";

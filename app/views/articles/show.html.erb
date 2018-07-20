@@ -1,17 +1,29 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+<div class="c-article">
+  <h1 class="c-article__title">
+    <%= @article.title.upcase %>
+  </h1>
+  <div class="c-article__text">
+    <p>
+      <%= simple_format @article.text %>
+    </p>
+  </div>
+</div>
 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
-
-<h2>Comments</h2>
-<%= render @article.comments %>
-
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
-
-<%= link_to 'Back', articles_path %>
+<%= link_to "Back", articles_path %> >
+<div class="c-comments">
+  <h2>COMMENTS:</h2>
+    <% @article.comments.each do |comment|  %>
+      <div class=c-comments__text>
+        <div class="c-comments__commenter">
+          <span>Commenter:</span> <%= comment.commenter %>
+        </div>
+        <div class="c-comments__body">
+          <span> Message: </span> <%= comment.body %>
+        </div>
+      </div>
+    <div class="c-comments__seperate">
+    </div>
+    <% end %>
+  <h2>Add a comment:</h2>
+  <%= render "comments/form" %>
+</div>

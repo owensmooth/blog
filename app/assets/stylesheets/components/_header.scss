@@ -1,0 +1,32 @@
+.c-header__text {
+  padding: 50px;
+  text-align: center;
+
+  h1 {
+    color: colour(dark-grey);
+    font-size: 64px;
+    font-weight: 500;
+  }
+
+  h2 {
+    color: colour(light-grey);
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  h1, h2 {
+    margin: 0;
+  }
+}
+
+@media (max-width: 769px) {
+  .c-header__text {
+    h1 {
+      font-size: 44px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+  }
+}

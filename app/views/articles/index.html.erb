@@ -1,17 +1,27 @@
-<h1>Listing articles</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th></th>
-  </tr>
-
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-    </tr>
-  <% end %>
-</table>
+<% @articles.each do |article| %>
+  <div class="c-article">
+    <div class="c-article__content">
+      <div class="c-article__date">
+        <%= article.created_at.to_s(:long) %>
+      </div>
+      <div class="c-article__image" align="center">
+        <div class="o-container__article-hero">
+          <%= image_tag("article_hero", class: "c-article__hero-image") %>
+        </div>
+      </div>
+      <div class="c-article__title">
+        <h1>
+          <%= article.title.upcase %>
+        </h1>
+      </div>
+      <div class="c-article__text">
+        <p>
+          <%= simple_format article.text %>
+        </p>
+      </div>
+      <div class="c-article__link">
+        <%= link_to "READ ARTICLE", article_path(article) %>
+      </div>
+    </div>
+  </div>
+<% end %>

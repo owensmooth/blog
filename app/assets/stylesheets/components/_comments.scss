@@ -1,0 +1,86 @@
+$base-spacing-unit: 20px;
+$base-transition: ease-in-out 0.3s all;
+
+$input-base-spacing: 9px;
+$input-base-radius: 3px;
+$input-border-width: 2px;
+$input-chevron-size: 24px;
+
+$button-base-spacing: 10px;
+$button-base-radius: 3px;
+$button-border-width: 1px;
+
+
+.c-comments {
+  display: block;
+  background-color: colour(dark-grey);
+  width: 100%;
+  color: white;
+
+  h2 {
+    padding: 20px;
+  }
+
+  &__form {
+    text-align: center;
+    padding: $input-base-spacing $input-base-spacing*2;
+    margin-right: $base-spacing-unit;
+    border-radius: $input-base-radius;
+    transition: $base-transition;
+  }
+
+  &__form-input {
+    padding: $input-base-spacing $input-base-spacing*2;
+    border-radius: $input-base-radius;
+    transition: $base-transition;
+  }
+
+  &__form-body {
+    padding: $input-base-spacing*2;
+    border-radius: $input-base-radius;
+    width: 300px;
+    transition: $base-transition;
+  }
+
+  &__form-submit {
+    padding: $button-base-spacing $button-base-spacing*2;
+    margin-bottom: $base-spacing-unit;
+    border-radius: $button-base-radius;
+    transition: $base-transition;
+    background-color: colour(dark-grey);
+    color: white;
+
+    &:hover {
+      box-shadow: 0px 2px 5px 0px transparentize(colour(light-grey), 0.5);
+      background-color: white;
+      color: black;
+      cursor: pointer;
+    }
+  }
+
+  &__text {
+    margin: 20px;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  &__commenter,
+  &__body {
+    display: block;
+    margin: 5px;
+
+    span {
+      color: colour(light-grey);
+    }
+  }
+
+  &__seperate {
+    border-bottom: 2px solid white;
+    width: 90%;
+    margin: auto;
+  }
+}

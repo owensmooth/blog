@@ -7,26 +7,47 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   </head>
 
   <body>
-    <div class ='o-container'>
-      <div class='o-container_nav'>
-        <div class='c-navigation'>
-          <div class='c-navigation_logo'>
-            <%= image_tag('os-logo.png') %>
-            <div class='c-navigation_links'>
-              <%= link_to 'Admin', admin_articles_path %> |
-              <%= link_to 'My Blog', articles_path %>
-            </div>
+    <div class ="o-container">
+      <div class="o-container__nav">
+        <input type="checkbox" id="burger-menu" class="c-navigation__checkbox" />
+        <label for="burger-menu" class="c-navigation__hamburger">
+          Menu
+        </label>
+        <nav class="c-navigation">
+          <div class="c-navigation__logo">
+            <a href="https://github.com/owensmooth">
+              <%= image_tag("github")%>
+            </a>
+            <a href="https://www.linkedin.com/in/owen-smith-7ba94415b/">
+              <%= image_tag("linkedin") %>
+            </a>
           </div>
+          <div class="c-navigation__links">
+            <ul class="c-navigation__links-list">
+              <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to "About", about_show_path %></li>
+              <li><%= link_to "Articles", articles_path %></li>
+              <li><%= link_to "Login", admin_articles_path %></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="o-container__header">
+        <div class="c-header__text">
+          <h1>OWEN SMITH</h1>
+          <h2>DEVELOPMENT BLOG</h2>
         </div>
       </div>
-      <div class='o-container_content'>
-        <div class='c-content'>
-          <div class='c-content_body'>
+      <div class="c-navigation__dropdown-menu">
+      </div>
+      <div class="o-container__content">
+        <div class="c-content">
+          <div class="c-content__body">
             <%= yield %>
           </div>
         </div>
