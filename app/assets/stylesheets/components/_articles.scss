@@ -25,7 +25,6 @@
 
   &__link {
     display: block;
-    background-color: dark-grey;
 
     a {
       text-decoration: none;
@@ -48,12 +47,14 @@
   }
 
   hr {
-    width: 80%;
+    width: 80%
   }
-}
 
-.c-article__disqus {
-  padding: 0px 20px;
+  &__disqus {
+    padding: 0px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
 }
 
 @media (max-width: 769px) {

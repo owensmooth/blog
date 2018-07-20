@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  get 'users/new'
-  get 'articles/index'
-  get 'about/show'
-  get '/signup', to: 'users#new'
+  get "/signup", to: "users#new"
 
   resources :articles, only: [:index, :show] do
     resources :comments
@@ -13,6 +10,7 @@ Rails.application.routes.draw do
   end
 
   resources :users
+  resources :about
 
-  root 'articles#index'
+  root "articles#index"
 end

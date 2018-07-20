@@ -1,6 +1,6 @@
-<div class='c-admin__articles  border  rounded'>
+<div class="c-admin__articles  border  rounded">
   <h1>Articles</h1>
-  <%= link_to 'New article', new_admin_article_path, class: 'btn btn-primary c-admin__button' %>
+  <%= link_to "New article", new_admin_article_path, class: "btn btn-primary c-admin__button" %>
   <table class="table table-hover">
     <thead>
       <tr>
@@ -16,15 +16,15 @@
       <tr>
         <td><%= article.title %></td>
         <td><%= article.text.truncate_words(15) %></td>
-        <td><%= link_to 'Show', admin_article_path(article) %></td>
-        <td><%= link_to 'Edit', edit_admin_article_path(article) %></td>
-        <td><%= link_to 'Destroy', admin_article_path(article),
-                method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "Show", admin_article_path(article) %></td>
+        <td><%= link_to "Edit", edit_admin_article_path(article) %></td>
+        <td><%= link_to "Destroy", admin_article_path(article),
+                method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
       <% end %>
     </tbody>
   </table>
 </div>
-<div class='c-admin__users'>
+<div class="c-admin__users">
 
 </div>

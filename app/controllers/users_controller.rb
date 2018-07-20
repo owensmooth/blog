@@ -11,9 +11,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Welcome!"
+      UserMailer.with(user: @user).welcome_email.deliver_later
       redirect_to @user
     else
-      render 'new'
+      render "new"
     end
   end
 

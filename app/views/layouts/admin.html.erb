@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track": "reload" %>
   </head>
   <body>
-  <div class ='o-container'>
-    <div class='c-admin'>
-      <div class='c-admin__nav'>
-        <%= image_tag('os') %>
+  <div class ="o-container">
+    <div class="c-admin">
+      <div class="c-admin__nav">
+        <%= image_tag("os") %>
         <a class="navbar-brand" href="#">ADMIN PANEL</a>
-        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to "Home", root_path %></li>
       </div>
-      <div class='c-admin__content'>
+      <div class="c-admin__content">
         <%= yield %>
       </div>
     </div>

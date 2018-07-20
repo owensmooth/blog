@@ -13,7 +13,7 @@ class Admin::UsersController < ApplicationController
       flash[:success] = "Welcome!"
       redirect_to @user
     else
-      render 'new'
+      render "new"
     end
   end
 
