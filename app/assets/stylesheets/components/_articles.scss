@@ -2,7 +2,19 @@
   margin: 30px 0;
   text-align: center;
 
-  &__table {
+  @media (max-width: 769px) {
+    &__text {
+      max-width: 600px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    &__text {
+      display: none;
+    }
+  }
+
+  &__content {
     width: 100%;
     padding: 10px 0;
   }

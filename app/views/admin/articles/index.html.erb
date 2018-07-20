@@ -1,5 +1,5 @@
 <h1>Listing articles</h1>
-<%= link_to 'New article', new_admin_article_path %>
+<%= link_to "New article", new_admin_article_path %>
 
 <div>
   <table>
@@ -13,10 +13,10 @@
       <tr>
         <td><%= article.title %></td>
         <td><%= article.text %></td>
-        <td><%= link_to 'Show', admin_article_path(article) %></td>
-        <td><%= link_to 'Edit', edit_admin_article_path(article) %></td>
-        <td><%= link_to 'Destroy', admin_article_path(article),
-                method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "Show", admin_article_path(article) %></td>
+        <td><%= link_to "Edit", edit_admin_article_path(article) %></td>
+        <td><%= link_to "Destroy", admin_article_path(article),
+                method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
     <% end %>
   </table>

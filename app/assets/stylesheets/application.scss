@@ -1,19 +1,17 @@
 // Utils
-@import 'utils/mq.scss';
 
 // Settings
-@import 'settings/normalize.scss';
-@import 'settings/fonts.scss';
-@import 'settings/colours.scss';
-@import 'settings/typography.scss';
-@import 'settings/breakpoints.scss';
+@import "settings/normalize.scss";
+@import "settings/fonts.scss";
+@import "settings/colours.scss";
+@import "settings/typography.scss";
 
 // Objects
-@import 'objects/containers.scss';
+@import "objects/containers.scss";
 
 // Components
-@import 'components/header.scss';
-@import 'components/navigation.scss';
-@import 'components/articles.scss';
-@import 'components/comments.scss';
-@import 'components/about.scss';
+@import "components/header.scss";
+@import "components/navigation.scss";
+@import "components/articles.scss";
+@import "components/comments.scss";
+@import "components/about.scss";

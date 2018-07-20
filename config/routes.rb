@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'articles/index'
-  get 'about/show'
+  get "about/show"
 
   resources :articles, only: [:index, :show] do
     resources :comments
@@ -10,5 +9,5 @@ Rails.application.routes.draw do
     resources :articles, :comments
   end
 
-  root 'articles#index'
+  root "articles#index"
 end

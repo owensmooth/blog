@@ -20,7 +20,7 @@ before_action :params_id, only: [:show, :edit]
     if @article.save
       redirect_to @article
     else
-      render 'new'
+      render "new"
     end
   end
 
@@ -30,7 +30,7 @@ before_action :params_id, only: [:show, :edit]
     if @article.update(article_params)
       redirect_to @article
     else
-      render 'edit'
+      render "edit"
     end
   end
 
