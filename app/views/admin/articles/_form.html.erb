@@ -1,31 +1,31 @@
-  <%= form_for [:admin, @article] do |form| %>
+<%= form_for [:admin, @article] do |form| %>
+  <div class="form-group c-article__form">
+    <% if @article.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@article.errors.count, "error") %> prohibited
+          this article from being saved:
+        </h2>
+        <ul>
+          <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-  <% if @article.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@article.errors.count, "error") %> prohibited
-        this article from being saved:
-      </h2>
-      <ul>
-        <% @article.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <p>
+      <%= form.label :Title %><br>
+      <%= form.text_field :title, class: "form-control" %>
+    </p>
 
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
+    <p>
+      <%= form.label :Content %><br>
+      <%= form.text_area :text, class: "form-control c-article__form-input-large" %>
+    </p>
 
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
-
-  <p>
-    <%= form.submit %>
-  </p>
-
+    <p>
+      <%= form.submit class: "btn btn-primary" %>
+    </p>
+  </div>
 <% end %>

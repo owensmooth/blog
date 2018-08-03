@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :articles, :comments
+    get '/', action: :index, controller: 'dashboard'
+    resources :articles, :comments, :users
   end
 
   resources :users

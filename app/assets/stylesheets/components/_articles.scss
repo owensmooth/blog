@@ -55,6 +55,14 @@
     max-width: 900px;
     margin: auto;
   }
+
+  &__form-input-large {
+    height: 420px;
+  }
+
+  &__edit {
+    padding: 10px;
+  }
 }
 
 @media (max-width: 769px) {
