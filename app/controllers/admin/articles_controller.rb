@@ -1,5 +1,6 @@
 class Admin::ArticlesController < Admin::BaseController
   before_action :params_id, only: [:show, :edit]
+
   def index
     @articles = Article.all
   end
@@ -18,6 +19,7 @@ class Admin::ArticlesController < Admin::BaseController
     @article = Article.new(article_params)
 
     if @article.save
+      NotificationMailer.notification_email(@article).deliver_later
       redirect_to @article
     else
       render 'new'
@@ -38,7 +40,7 @@ class Admin::ArticlesController < Admin::BaseController
     @article = Article.find(params[:id])
     @article.destroy
 
-    redirect_to admin_articles_path
+    redirect_to admin_path
   end
 
   private

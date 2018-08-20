@@ -1,12 +1,13 @@
 require "rails_helper"
 
-describe "User Mailer", :type => :mailer do
-  it "Sends a email when new account created" do
-    user = create :user
-    mail = UserMailer.with(user: user).welcome_email
+describe "Mailer", :type => :mailer do
+  it "Sends a email when new article created" do
+    article = create :article
+    notification = create :notification
 
-    expect(mail.to).to have_content("test@test.com")
+    mail = NotificationMailer.notification_email(article)
     expect(mail.from).to have_content("notifications@example.com")
+    expect(mail.to).to have_content("test@test.com")
   end
 
   it "Sends a email with correct details" do

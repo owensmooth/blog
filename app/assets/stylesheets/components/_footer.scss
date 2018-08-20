@@ -1,0 +1,42 @@
+.c-footer {
+  margin: auto;
+
+  &__form {
+    display: block;
+    max-width: 700px;
+    margin: auto;
+    padding: 50px;
+
+    &-header {
+      padding: none;
+      margin: auto;
+      color: colour(light-grey);
+      text-align: center;
+    }
+
+    &-input {
+      display: inline-block;
+      background-color: colour(light-grey);
+      border: none;
+      padding: 10px;
+      border-radius: 3px;
+      width: 300px;
+      margin-top: 10px;
+      margin-left: 140px;
+      text-align: center;
+    }
+
+    &-submit {
+      display: inline-block;;
+      background-image: url('/assets/arrow.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: colour(dark-grey);
+      border: none;
+      height: 32px;
+      width: 35px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
+}

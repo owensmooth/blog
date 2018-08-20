@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :articles, only: [:index, :show] do
     resources :comments
+    resources :notifications
   end
 
   namespace :admin do
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :about
+  resources :notifications
 
   root "articles#index"
 end

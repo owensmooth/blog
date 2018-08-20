@@ -17,7 +17,7 @@
         </td>
         <td class="c-article__text">
           <p>
-            <%= simple_format article.text %>
+            <%= simple_format article.text.truncate_words(150) %>
           </p>
         </td>
         <td class="c-article__link">

@@ -11,6 +11,10 @@ describe "my special blog" do
     expect(page).to have_content("YOLOSWAG")
   end
 
+  it "allows a user to be created" do
+    
+  end
+
   context "admin" do
     it "displays a blog post listing" do
       create :article, title: "beans"
