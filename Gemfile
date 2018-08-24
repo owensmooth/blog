@@ -31,6 +31,7 @@ gem "bcrypt", "~> 3.1.12"
 gem "bootstrap", "~> 4.1.1"
 
 gem "sprockets-rails", :require => "sprockets/railtie"
+# gem "bcrypt", "~> 3.1.7"
 
 # Use ActiveStorage variant
 # gem "mini_magick", "~> 4.8"

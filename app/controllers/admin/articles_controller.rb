@@ -22,7 +22,7 @@ class Admin::ArticlesController < Admin::BaseController
       NotificationMailer.notification_email(@article).deliver_later
       redirect_to @article
     else
-      render 'new'
+      render "new"
     end
   end
 
@@ -32,7 +32,7 @@ class Admin::ArticlesController < Admin::BaseController
     if @article.update(article_params)
       redirect_to @article
     else
-      render 'edit'
+      render "edit"
     end
   end
 

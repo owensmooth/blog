@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get "/signup", to: "users#new"
+  get "about/show"
 
   resources :articles, only: [:index, :show] do
     resources :comments

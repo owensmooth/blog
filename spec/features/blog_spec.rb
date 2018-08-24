@@ -30,6 +30,11 @@ describe "my special blog" do
       create :article, title: "beans"
       visit_auth "/admin/articles"
 
+  context "admin" do
+    it "displays a blog post listing" do
+      create :article, title: "beans"
+      visit_auth "/admin/articles"
+
       expect(page).to have_content("yoloswag")
       expect(page).to have_content("beans")
     end
@@ -57,7 +62,11 @@ describe "my special blog" do
       fill_in "Text", with: "Just edited"
 
       click_button "Update Article"
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> develop
       expect(page).to have_content("EDITED POST")
     end
   end
