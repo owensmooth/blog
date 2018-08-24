@@ -1,4 +1,4 @@
-class Admin::ArticlesController < Admin::BaseController
+class Admin::ArticlesController < Admin::ApplicationController
   before_action :params_id, only: [:show, :edit]
 
   def index

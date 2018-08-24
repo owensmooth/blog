@@ -1,11 +1,11 @@
 require "rails_helper"
 
 describe "Mailer", :type => :mailer do
-  it "Sends a email when new article created" do
-    article = create :article
-    notification = create :notification
+  let!(:notification) { create(:notification) }
+  let(:article) { create(:article) }
+  let(:mail) { NotificationMailer.notification_email(article) }
 
-    mail = NotificationMailer.notification_email(article)
+  it "Sends a email when new article created" do
     expect(mail.from).to have_content("notifications@example.com")
     expect(mail.to).to have_content("test@test.com")
   end
