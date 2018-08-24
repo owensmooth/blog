@@ -12,7 +12,17 @@ describe "my special blog" do
   end
 
   it "allows a user to be created" do
-    
+    user = create :user, name: "test", email: "test@test.com", password: "test123", password_confirmation: "test123"
+
+    expect(user.name).to match("test")
+    expect(user.email).to match("test@test.com")
+    expect(user.password).to match("test123")
+  end
+
+  it "allows a user to input email for notifcaitions" do
+    notification = create :notification, email: "testing@123.com"
+
+    expect(notification.email).to match("testing@123.com")
   end
 
   context "admin" do
