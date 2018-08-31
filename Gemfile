@@ -42,7 +42,7 @@ gem "sprockets-rails", :require => "sprockets/railtie"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
 
-gem 'mini_racer', '~> 0.1.14'
+gem 'mini_racer'
 
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
