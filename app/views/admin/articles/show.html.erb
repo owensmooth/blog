@@ -1,18 +1,12 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
-
-<h2>Comments</h2>
-<%= render @article.comments %>
-
-<h2>Add a comment:</h2>
-<%= render "comments/form" %>
-
-<%= link_to "Edit", edit_admin_article_path(@article) %> |
-<%= link_to "Back", admin_articles_path %>
+<div class="card">
+  <h5 class="card-header">
+    <%= @article.title %>
+  </h5>
+  <div class="card-body">
+    <p class="card-text">
+      <%= simple_format @article.text %>
+    </p>
+    <%= link_to "Edit", edit_admin_article_path(@article) %> |
+    <%= link_to "Back", admin_path %>
+  </div>
+</div>

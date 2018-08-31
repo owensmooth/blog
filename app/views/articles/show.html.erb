@@ -1,29 +1,21 @@
 <div class="c-article">
   <h1 class="c-article__title">
-    <%= @article.title.upcase %>
+    <%= @article.title %>
   </h1>
   <div class="c-article__text">
     <p>
       <%= simple_format @article.text %>
     </p>
   </div>
+  <%= link_to "Back", articles_path %> >
 </div>
-
-<%= link_to "Back", articles_path %> >
-<div class="c-comments">
-  <h2>COMMENTS:</h2>
-    <% @article.comments.each do |comment|  %>
-      <div class=c-comments__text>
-        <div class="c-comments__commenter">
-          <span>Commenter:</span> <%= comment.commenter %>
-        </div>
-        <div class="c-comments__body">
-          <span> Message: </span> <%= comment.body %>
-        </div>
-      </div>
-    <div class="c-comments__seperate">
-    </div>
-    <% end %>
-  <h2>Add a comment:</h2>
-  <%= render "comments/form" %>
-</div>
+<div class="c-article__disqus" id="disqus_thread"></div>
+<script>
+(function() { // DON"T EDIT BELOW THIS LINE
+var d = document, s = d.createElement("script");
+s.src = "https://onsmith.disqus.com/embed.js";
+s.setAttribute("data-timestamp", +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

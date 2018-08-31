@@ -1,5 +1,3 @@
-// Utils
-
 // Settings
 @import "settings/normalize.scss";
 @import "settings/fonts.scss";
@@ -11,7 +9,9 @@
 
 // Components
 @import "components/header.scss";
+@import "components/footer.scss";
 @import "components/navigation.scss";
 @import "components/articles.scss";
 @import "components/comments.scss";
 @import "components/about.scss";
+@import "components/signup.scss";

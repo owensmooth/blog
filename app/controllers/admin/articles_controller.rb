@@ -1,5 +1,6 @@
-class Admin::ArticlesController < Admin::BaseController
-before_action :params_id, only: [:show, :edit]
+class Admin::ArticlesController < Admin::ApplicationController
+  before_action :get_article, only: [:show, :edit, :update, :destroy]
+
   def index
     @articles = Article.all
   end
@@ -25,8 +26,6 @@ before_action :params_id, only: [:show, :edit]
   end
 
   def update
-    @article = Article.find(params[:id])
-
     if @article.update(article_params)
       redirect_to @article
     else
@@ -35,18 +34,17 @@ before_action :params_id, only: [:show, :edit]
   end
 
   def destroy
-    @article = Article.find(params[:id])
     @article.destroy
 
-    redirect_to admin_articles_path
+    redirect_to admin_path
   end
 
   private
-    def article_params
-      params.require(:article).permit(:title, :text)
-    end
+  def article_params
+    params.require(:article).permit(:title, :text)
+  end
 
-    def params_id
-      @article = Article.find(params[:id])
-    end
+  def get_article
+    @article = Article.find(params[:id])
+  end
 end

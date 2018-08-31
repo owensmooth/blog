@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <%= stylesheet_link_tag    "admin/application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "admin/application", "data-turbolinks-track": "reload" %>
+  </head>
+  <body>
+  <div class ="o-container">
+    <div class="c-admin">
+      <div class="c-admin__nav">
+        <%= image_tag("os") %>
+        <a class="navbar-brand" href="/">ADMIN PANEL</a>
+        <li><%= link_to "Home", root_path %></li>
+      </div>
+      <div class="c-admin__content">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

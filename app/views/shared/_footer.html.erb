@@ -1,0 +1,19 @@
+<div class="o-container__footer">
+  <div class="c-footer">
+    <div class="c-footer__form">
+      <h3 class="c-footer__form-header">Sign up for email notifications</h3>
+      <%= form_for :notification, url: notifications_path do |form| %>
+        <div class="c-footer__form-notification-input">
+          <span>
+            <%= form.text_field :email, placeholder: "Enter email", class: "c-footer__form-input" %>
+          </span>
+        </div>
+        <div class="c-footer__form-notification-submit">
+          <span>
+            <%= form.submit "",  class: "c-footer__form-submit" %>
+          </span>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

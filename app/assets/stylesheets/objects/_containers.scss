@@ -1,6 +1,8 @@
 .o-container {
   background-color: colour(background);
   height: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 
   &__header {
     height: 200px;
@@ -13,7 +15,6 @@
   }
 
   &__content {
-    width: 100%;
     margin: 0 auto;
 
     h1,
@@ -28,6 +29,12 @@
     width: 900px;
     overflow: hidden;
     border-radius: 4px;
+  }
+
+  &__footer {
+    height: 180px;
+    background-color: colour(dark-grey);
+    overflow: hidden;
   }
 }
 

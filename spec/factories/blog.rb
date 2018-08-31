@@ -1,10 +1,12 @@
 FactoryBot.define do
-  sequence :title do |n|
-    "Test post #{n}"
+  factory :user do
+    name {'test'}
+    email {'test@test.com'}
+    password {'password'}
+    password_confirmation {'password'}
   end
 
-  factory :article do
-    title 
-    text "test123123"
+  factory :notification do
+    email {'test@test.com'}
   end
 end

@@ -30,20 +30,18 @@
           <div class="c-navigation__links">
             <ul class="c-navigation__links-list">
               <li><%= link_to "Home", root_path %></li>
-              <li><%= link_to "About", about_show_path %></li>
+              <li><%= link_to "About", about_index_path %></li>
               <li><%= link_to "Articles", articles_path %></li>
-              <li><%= link_to "Login", admin_articles_path %></li>
+              <li><%= link_to "Login", admin_path %></li>
             </ul>
           </div>
         </nav>
       </div>
       <div class="o-container__header">
         <div class="c-header__text">
-          <h1>OWEN SMITH</h1>
-          <h2>DEVELOPMENT BLOG</h2>
+          <h1>owen smoov</h1>
+          <h2>dev blog</h2>
         </div>
-      </div>
-      <div class="c-navigation__dropdown-menu">
       </div>
       <div class="o-container__content">
         <div class="c-content">
@@ -52,6 +50,7 @@
           </div>
         </div>
       </div>
+      <%= render partial: "shared/footer" %>
     </div>
   </body>
 </html>

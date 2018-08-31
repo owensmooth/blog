@@ -1,0 +1,48 @@
+.c-admin {
+  background-color: white;
+  &__nav {
+    height: 70px;
+    width: 100%;
+    background-color: colour(dark-grey);
+
+    li {
+      list-style: none;
+      text-transform: uppercase;
+      margin: 25px;
+      float: right;
+    }
+
+    img {
+      height: 50px;
+      margin: 10px 5px;
+    }
+  }
+
+
+  &__sidebar {
+    height: 100%;
+    width: 200px;
+    background-color: colour(dark-grey);
+    position: fixed
+  }
+
+  &__content {
+    margin: 10px
+  }
+
+  &__button {
+    margin-bottom: 5px;
+    margin-right: 95px;
+    float: right;
+  }
+
+  &__articles {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: colour(background);
+  }
+
+  h1 {
+    margin: 0;
+  }
+}

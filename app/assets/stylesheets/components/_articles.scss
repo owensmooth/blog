@@ -1,6 +1,5 @@
 .c-article {
   margin: 30px 0;
-  text-align: center;
 
   @media (max-width: 769px) {
     &__text {
@@ -17,27 +16,31 @@
   &__content {
     width: 100%;
     padding: 10px 0;
+    max-width: 900px;
+    margin: auto;
   }
 
   &__title {
     display: block;
     text-align: center;
+    text-transform: uppercase;
   }
 
   &__text {
     display: block;
-    max-width: 900px;
-    margin: auto;
+    text-align: center;
   }
 
   &__date {
     display: block;
     color: colour(light-grey);
+    text-align: center;
   }
 
   &__link {
     display: block;
-    background-color: dark-grey;
+    text-align: center;
+    
 
     a {
       text-decoration: none;
@@ -57,6 +60,24 @@
     right: -9999px;
     margin: auto;
     height: 700px;
+  }
+
+  hr {
+    width: 80%
+  }
+
+  &__disqus {
+    padding: 0px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  &__form-input-large {
+    height: 420px;
+  }
+
+  &__edit {
+    padding: 10px;
   }
 }
 
