@@ -2,17 +2,19 @@ require "rails_helper"
 
 RSpec.describe "Articles" do
   describe "viewing articles" do
-    let!(:article) { create(:article) }
+    let!(:articles) { create_list(:article, 4) }
 
-    it "should display the article" do
+    it "should display the articles" do
       visit articles_path
 
-      expect(page).to have_content(article.title.upcase)
+      articles.each do |article|
+        expect(page).to have_content(article.title.upcase)
+      end
     end
   end
 
   context "adding an article" do
-    describe "with valid data", js: true do
+    describe "with valid data" do
       it "should add the article" do
       http_auth
 
@@ -29,17 +31,23 @@ RSpec.describe "Articles" do
 
     describe "with invalid data" do
       it "should not add the article" do
-      article = create :article
-      article.title = "Test"
-      
-      expect(article).to_not be_valid
-      expect(article.errors.messages[:title]).to eq ["is too short (minimum is 5 characters)"]
+        http_auth
+
+        visit new_admin_article_path
+
+        fill_in "Title", with: "Flap"
+        fill_in "Text", with: "bird"
+
+        click_button "Create Article"
+
+        expect(page).to have_content "Title is too short"
       end
     end
   end
 
   describe "editing an article" do
     let!(:article) { create(:article) }
+
     it "should be updated" do
       http_auth
       visit admin_articles_path
@@ -54,6 +62,7 @@ RSpec.describe "Articles" do
 
   describe "deleting an article", js: true do
     let!(:article) { create(:article) }
+
     it "should delete it" do
       http_auth
 

@@ -1,13 +1,8 @@
 module AuthHelper
-  def http_login
-    # user = "admin"
-    # pw = "password"
-    # request.env["HTTP_AUTHORIZATION"] = ActionController::HttpAuthentication::Basic.encode_credentials(user,pw)
-  end
 
   def http_auth
-    name = "admin"
-    password = "password"
+    name = ENV.fetch('ADMIN_NAME')
+    password = ENV.fetch('ADMIN_PASSWORD')
 
     if page.driver.respond_to?(:basic_auth)
       page.driver.basic_auth(name, password)

@@ -1,18 +1,15 @@
 Rails.application.routes.draw do
-  get "/signup", to: "users#new"
-  get "about/show"
+  get "static_pages/about"
 
   resources :articles, only: [:index, :show] do
     resources :comments
-    resources :notifications
   end
 
   namespace :admin do
     get '/', action: :index, controller: 'dashboard'
-    resources :articles, :comments, :users
+    resources :articles, :comments
   end
 
-  resources :users
   resources :about
   resources :notifications
 

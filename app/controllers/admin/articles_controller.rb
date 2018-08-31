@@ -1,5 +1,5 @@
 class Admin::ArticlesController < Admin::ApplicationController
-  before_action :params_id, only: [:show, :edit]
+  before_action :get_article, only: [:show, :edit, :update, :destroy]
 
   def index
     @articles = Article.all
@@ -19,7 +19,6 @@ class Admin::ArticlesController < Admin::ApplicationController
     @article = Article.new(article_params)
 
     if @article.save
-      NotificationMailer.notification_email(@article).deliver_later
       redirect_to @article
     else
       render "new"
@@ -27,8 +26,6 @@ class Admin::ArticlesController < Admin::ApplicationController
   end
 
   def update
-    @article = Article.find(params[:id])
-
     if @article.update(article_params)
       redirect_to @article
     else
@@ -37,18 +34,17 @@ class Admin::ArticlesController < Admin::ApplicationController
   end
 
   def destroy
-    @article = Article.find(params[:id])
     @article.destroy
 
     redirect_to admin_path
   end
 
   private
-    def article_params
-      params.require(:article).permit(:title, :text)
-    end
+  def article_params
+    params.require(:article).permit(:title, :text)
+  end
 
-    def params_id
-      @article = Article.find(params[:id])
-    end
+  def get_article
+    @article = Article.find(params[:id])
+  end
 end
