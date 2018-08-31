@@ -50,6 +50,7 @@ group :development, :test do
 
   gem "rspec-rails", "~> 3.7"
   gem 'dotenv-rails', '~> 2.5'
+  gem 'faker', '~> 1.8', '>= 1.8.7'
 end
 
 group :development do
@@ -74,7 +75,6 @@ group :test do
   gem "chromedriver-helper"
   gem "database_cleaner"
   gem "factory_bot_rails"
-  gem 'faker', '~> 1.8', '>= 1.8.7'
   gem 'capybara-screenshot'
 end
 
