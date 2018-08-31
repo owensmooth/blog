@@ -8,7 +8,7 @@ RSpec.describe "Articles" do
       visit articles_path
 
       articles.each do |article|
-        expect(page).to have_content(article.title.upcase)
+        expect(page).to have_content(article.title)
       end
     end
   end
@@ -25,7 +25,7 @@ RSpec.describe "Articles" do
 
       click_button "Create Article"
 
-      expect(page).to have_content("FLAPPY")
+      expect(page).to have_content("Flappy")
       end
     end
 
