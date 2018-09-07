@@ -4,7 +4,7 @@
 
 Basic Blog with minimal styling at the moment
 
-# Ruby version
+# Ruby version 
  `2.3.4`
 
 # Install
@@ -23,7 +23,15 @@ Basic Blog with minimal styling at the moment
 
 # Database
 
- 1. `db:create` or `db:migrate` to make the databases used for the blog including the test databases.
+ #### Create the database
+ 1. `rails db:create`
+  
+ #### Add the tables to the database's
+ 1. `rails db:migrate`
+  
+ #### Add seed data into the database
+ 3. `rails db:seed`
+  
 
  I am using postgresql for the database which can be viewed using postico
  1. use postico to connect to the local database, you may need to create the connection.
