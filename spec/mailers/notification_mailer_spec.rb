@@ -7,7 +7,7 @@ RSpec.describe NotificationMailer do
     let(:mail) { NotificationMailer.notification_email(article) }
 
     it "should be valid" do
-      expect(mail.from).to have_content("notifications@example.com")
+      expect(mail.from).to have_content("owen.smith@shiftcommerce.com")
       expect(mail.to).to have_content("test@test.com")
     end
   end
