@@ -13,12 +13,12 @@ module Blog
 
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
-      :address                => "smtp.postmarkapp.com",
-      :port                   => 25,
-      :user_name               => ENV.fetch("POSTMARK_USERNAME"),
-      :password                => ENV.fetch("POSTMARK_PASSWORD"),
-      :authentication         => "plain",
-    :enable_starttls_auto     => true
+      address:                 "smtp.postmarkapp.com",
+      port:                    25,
+      user_name:               ENV.fetch("POSTMARK_USERNAME"),
+      password:                ENV.fetch("POSTMARK_PASSWORD"),
+      authentication:          "plain",
+      enable_starttls_auto:      true
     }
 
     # Settings in config/environments/* take precedence over those specified here.

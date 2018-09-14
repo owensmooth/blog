@@ -5,10 +5,10 @@ class NotificationMailer < ApplicationMailer
     @notification = Notification.all
     @notification.each do |n|
       mail(
-        :subject => 'New blog post!!!',
-        :to  => n.email,
-        :from => 'owen.smith@shiftcommerce.com',
-        :track_opens => 'true')
+        subject: 'New blog post!!!',
+        to: n.email,
+        from: 'owen.smith@shiftcommerce.com',
+        track_opens: 'true')
     end
   end
 end
