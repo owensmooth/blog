@@ -1,27 +1,25 @@
 # README
 
-# Procoders - Unit 1
-
 Basic Blog with minimal styling at the moment
 
-# Ruby version 
+## Ruby version 
  `2.3.4`
 
-# Install
+## Install
 
  1. Clone the repository
 
  2. `bundle install`
 
-# Start the app
+## Start the app
 
  `rails server`
 
-# View the app
+## View the app
 
  `Go to localhost:3000 and the app will load`
 
-# Database
+## Database
 
  #### Create the database
  1. `rails db:create`

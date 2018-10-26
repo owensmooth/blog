@@ -5,6 +5,6 @@ class Article < ApplicationRecord
   after_create :send_notification
 
   def send_notification
-    EmailService.new({notification: self}).perform
+    NewPostService.call(self)
   end
 end
