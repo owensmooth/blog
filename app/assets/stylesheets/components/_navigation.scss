@@ -9,8 +9,16 @@
     margin: 0;
     top: 240px;
 
-  &__logo {
+  &__social {
     display: none;
+  }
+
+  &__logo {
+    background-image: url('/assets/logo-mobile.svg');
+    background-repeat: no-repeat;
+    width: 80px;
+    margin-top: 3px;
+    float: right;
   }
 
   &__links {
@@ -59,17 +67,29 @@
     background-color: white;
     transition: 0;
     top: 0;
+    display: flex;
+    justify-content: space-between;
 
-    &__logo {
+    &__social {
       display: block;
       margin-left: 10px;
+      order: 1;
     }
 
-    &__logo img {
+    &__social img {
       display: block;
       height: 24px;
       float: left;
       margin: 10px 5px;
+    }
+
+    &__logo {
+      order: 2;
+      background-image: url('/assets/logo-desktop.svg');
+      background-repeat: no-repeat;
+      width: 80px;
+      margin-top: 3px;
+      margin-left: 270px;
     }
 
     &__links {
@@ -77,6 +97,7 @@
       font-size: 16px;
       text-align: right;
       padding: 15px 0;
+      order: 3;
 
       ul {
         padding: 0;
@@ -106,5 +127,4 @@
       display: none;
     }
   }
-
 }

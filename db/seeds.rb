@@ -7,3 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first
 
 Article.create(title: Faker::Lorem.sentence, text: Faker::Lorem.paragraph(5))
+Article.create(title: Faker::Lorem.sentence, text: Faker::Lorem.paragraph(5))
+Article.create(title: Faker::Lorem.sentence, text: Faker::Lorem.paragraph(5))
+Article.create(title: Faker::Lorem.sentence, text: Faker::Lorem.paragraph(5))
+Article.create(title: Faker::Lorem.sentence, text: Faker::Lorem.paragraph(5))
+Article.create(title: Faker::Lorem.sentence, text: Faker::Lorem.paragraph(5))

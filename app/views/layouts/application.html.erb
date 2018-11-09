@@ -11,21 +11,25 @@
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   </head>
 
-  <body>
+    <body>
     <div class ="o-container">
       <div class="o-container__nav">
         <input type="checkbox" id="burger-menu" class="c-navigation__checkbox" />
         <label for="burger-menu" class="c-navigation__hamburger">
           Menu
         </label>
+        <div class="o-container__nav-logo">
+        </div>
         <nav class="c-navigation">
-          <div class="c-navigation__logo">
+          <div class="c-navigation__social">
             <a href="https://github.com/owensmooth">
               <%= image_tag("github")%>
             </a>
             <a href="https://www.linkedin.com/in/owen-smith-7ba94415b/">
               <%= image_tag("linkedin") %>
             </a>
+          </div>
+          <div class="c-navigation__logo">
           </div>
           <div class="c-navigation__links">
             <ul class="c-navigation__links-list">
@@ -38,9 +42,20 @@
         </nav>
       </div>
       <div class="o-container__header">
-        <div class="c-header__text">
-          <h1>owen smoov</h1>
-          <h2>dev blog</h2>
+        <div class="c-header" id="container">
+          Make
+          <div id=flip>
+            <div>
+              <div>Everything</div>
+            </div>
+            <div>
+              <div>code</div>
+            </div>
+            <div>
+              <div>work</div>
+            </div>
+          </div>
+          awesome!
         </div>
       </div>
       <div class="o-container__content">

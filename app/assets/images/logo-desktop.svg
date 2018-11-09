@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224 137">
+  <defs>
+    <style>
+      .cls-1, .cls-3, .cls-4 {
+        fill: #707070;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #707070;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        font-size: 100px;
+      }
+
+      .cls-3, .cls-4 {
+        font-family: HelveticaNeue-Bold, Helvetica Neue;
+        font-weight: 700;
+      }
+
+      .cls-4 {
+        font-size: 20px;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+
+      .cls-6 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="logo-desktop" transform="translate(-676.065 -246)">
+    <g id="Rectangle_7" data-name="Rectangle 7" class="cls-1" transform="translate(676.065 246)">
+      <rect class="cls-5" width="224" height="137"/>
+      <rect class="cls-6" x="0.5" y="0.5" width="223" height="136"/>
+    </g>
+    <g id="Rectangle_5" data-name="Rectangle 5" class="cls-2" transform="translate(679 249)">
+      <rect class="cls-5" width="218.063" height="131"/>
+      <rect class="cls-6" x="0.5" y="0.5" width="217.063" height="130"/>
+    </g>
+    <g id="Rectangle_6" data-name="Rectangle 6" class="cls-2" transform="translate(679 249)">
+      <rect class="cls-5" width="218.063" height="11"/>
+      <rect class="cls-6" x="0.5" y="0.5" width="217.063" height="10"/>
+    </g>
+    <g id="Ellipse_3" data-name="Ellipse 3" class="cls-2" transform="translate(683 252)">
+      <circle class="cls-5" cx="2.5" cy="2.5" r="2.5"/>
+      <circle class="cls-6" cx="2.5" cy="2.5" r="2"/>
+    </g>
+    <g id="Ellipse_4" data-name="Ellipse 4" class="cls-2" transform="translate(689 252)">
+      <circle class="cls-5" cx="2.5" cy="2.5" r="2.5"/>
+      <circle class="cls-6" cx="2.5" cy="2.5" r="2"/>
+    </g>
+    <g id="Ellipse_5" data-name="Ellipse 5" class="cls-2" transform="translate(695 252)">
+      <circle class="cls-5" cx="2.5" cy="2.5" r="2.5"/>
+      <circle class="cls-6" cx="2.5" cy="2.5" r="2"/>
+    </g>
+    <text id="OS" class="cls-3" transform="translate(717.065 344)"><tspan x="0" y="0">OS</tspan></text>
+    <text id="DEV_BLOG" data-name="DEV BLOG" class="cls-4" transform="translate(737.065 371)"><tspan x="0" y="0">DEV BLOG</tspan></text>
+  </g>
+</svg>

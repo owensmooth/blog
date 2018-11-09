@@ -1,5 +1,4 @@
 .o-container {
-  background-color: colour(background);
   height: 100%;
   max-width: 100vw;
   overflow-x: hidden;
@@ -12,10 +11,21 @@
   &__nav {
     background-color: white;
     height: 40px;
+
+    &-logo {
+      background-image: url('/assets/logo-mobile.svg');
+      background-repeat: no-repeat;
+      width: 80px;
+      height: 35px;
+      margin: auto;
+      padding-top: 5px;
+    }
   }
 
   &__content {
     margin: 0 auto;
+    height: 100%;
+    width: 80%;
 
     h1,
     h2 {
@@ -26,9 +36,8 @@
   &__article-hero {
     position: relative;
     height: 250px;
-    width: 900px;
+    width: 455px;
     overflow: hidden;
-    border-radius: 4px;
   }
 
   &__footer {

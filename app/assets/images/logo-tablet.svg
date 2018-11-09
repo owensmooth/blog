@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194 137">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #707070;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #707070;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="logo-tablet" transform="translate(-459 -249)">
+    <g id="Rectangle_3" data-name="Rectangle 3" class="cls-1" transform="translate(459 249)">
+      <rect class="cls-3" width="194" height="137" rx="10"/>
+      <rect class="cls-4" x="0.5" y="0.5" width="193" height="136" rx="9.5"/>
+    </g>
+    <g id="Rectangle_4" data-name="Rectangle 4" class="cls-2" transform="translate(475 253)">
+      <rect class="cls-3" width="174" height="130" rx="10"/>
+      <rect class="cls-4" x="0.5" y="0.5" width="173" height="129" rx="9.5"/>
+    </g>
+    <g id="Ellipse_2" data-name="Ellipse 2" class="cls-2" transform="translate(462 309)">
+      <circle class="cls-3" cx="5.5" cy="5.5" r="5.5"/>
+      <circle class="cls-4" cx="5.5" cy="5.5" r="5"/>
+    </g>
+  </g>
+</svg>
