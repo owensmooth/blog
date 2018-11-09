@@ -1,8 +1,8 @@
 class SignUpService
-  attr_accessor :notfication
+  attr_accessor :notification
 
-  def initialize(notification)
-    @notfification = notification
+  def initialize(notification:)
+    @notification = notification
   end
 
   def self.call(*args)
@@ -10,6 +10,6 @@ class SignUpService
   end
 
   def call
-    NotificationMailer.signup_email().deliver_later
+    NotificationMailer.signup_email(notification: notification).deliver_now
   end
 end

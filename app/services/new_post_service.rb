@@ -1,15 +1,12 @@
 class NewPostService
-  attr_accessor :notfication
-
-  def initialize(notification)
-    @notfification = notification
+  def initialize
   end
 
-  def self.call(*args)
-    new(*args).call
+  def self.call
+    new.call
   end
 
   def call
-    NotificationMailer.notification_email().deliver_later
+    NotificationMailer.notification_email.deliver_now
   end
 end

@@ -1,22 +1,21 @@
 class NotificationMailer < ApplicationMailer
 
   def notification_email
-    @notification = Notification.all
-    @notification.each do |n|
+    @notifications = Notification.all
+    @notifications.each do |notification|
       mail(
         subject: 'New blog post!!!',
-        to: n.email,
+        to: notification.email,
         from: 'owen.smith@shiftcommerce.com',
         track_opens: 'true'
       )
     end
   end
 
-  def signup_email
-    @user = Notification.last
+  def signup_email(notification:)
     mail(
       subject: 'Welcome',
-      to: @user.email,
+      to: notification.email,
       from: 'owen.smith@shiftcommerce.com',
       track_opens: 'true'
     )
