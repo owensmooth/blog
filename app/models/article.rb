@@ -5,6 +5,6 @@ class Article < ApplicationRecord
   after_create :send_notification
 
   def send_notification
-    NewPostService.call(self)
+    NewPostService.call()
   end
 end
