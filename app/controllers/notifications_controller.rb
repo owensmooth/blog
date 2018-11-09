@@ -1,6 +1,7 @@
 class NotificationsController < ApplicationController
 
   def new
+    @notification = Notification.new
   end
 
   def create
@@ -10,7 +11,7 @@ class NotificationsController < ApplicationController
       flash[:success] = "Success!"
       redirect_to root_path
     else
-      redirect_to root_path
+      render :new
     end
   end
 
