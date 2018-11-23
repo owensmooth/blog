@@ -7,6 +7,6 @@ class NewPostService
   end
 
   def call
-    NotificationMailer.notification_email.deliver_now
+    EmailWorker.perform.notification_email
   end
 end

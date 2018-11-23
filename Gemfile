@@ -30,6 +30,8 @@ gem "bcrypt", "~> 3.1.12"
 
 gem "bootstrap", "~> 4.1.1"
 
+gem 'sidekiq'
+
 gem "sprockets-rails", :require => "sprockets/railtie"
 # gem "bcrypt", "~> 3.1.7"
 

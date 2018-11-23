@@ -10,6 +10,6 @@ class SignUpService
   end
 
   def call
-    NotificationMailer.signup_email(notification: notification).deliver_now
+    EmailWorker.perform.signup_email(notification: notification)
   end
 end
