@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe NotificationMailer do
+RSpec.describe NotificationMailer, type: :mailer do
   describe "Sending an email when new article created" do
     let!(:notification) { create(:notification) }
     let(:article) { create(:article) }
