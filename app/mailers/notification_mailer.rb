@@ -1,8 +1,8 @@
 class NotificationMailer < ApplicationMailer
 
   def notification_email
-    @notifications = Notification.all
-    @notifications.each do |notification|
+    notifications = Notification.all
+    notifications.each do |notification|
       mail(
         subject: 'New blog post!!!',
         to: notification.email,

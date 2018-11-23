@@ -7,6 +7,6 @@ FactoryBot.define do
   end
 
   factory :notification do
-    email {"test@test.com" "test123@test.com"}
+    sequence(:email) { |n| "test#{n}@test.com"}
   end
 end

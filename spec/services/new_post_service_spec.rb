@@ -8,8 +8,7 @@ RSpec.describe NewPostService do
 
     it "should be valid and be sent to all users" do
       expect(mail.from).to have_content("owen.smith@shiftcommerce.com")
-      expect(mail.to).to have_content("test@test.com")
-      expect(mail.to).to have_content("test123@test.com")
+      expect(mail.to).to have_content("test3@test.com")
       expect(mail.subject).to match("New blog post!!!")
       expect(mail.body.encoded).to match("Hi, a new article has been posted")
     end

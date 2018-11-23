@@ -7,7 +7,7 @@ RSpec.describe SignUpService do
 
     it "should be valid" do
       expect(mail.from).to have_content("owen.smith@shiftcommerce.com")
-      expect(mail.to).to have_content("test123@test.com")
+      expect(mail.to).to have_content("test4@test.com")
       expect(mail.subject).to match("Welcome")
       expect(mail.body.encoded).to match("Hi, you are now signed up for email notifications")
     end

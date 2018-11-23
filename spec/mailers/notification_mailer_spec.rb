@@ -8,7 +8,7 @@ RSpec.describe NotificationMailer do
 
     it "should be valid" do
       expect(mail.from).to have_content("owen.smith@shiftcommerce.com")
-      expect(mail.to).to have_content("test@test.com")
+      expect(mail.to).to have_content("test1@test.com")
     end
   end
 
@@ -18,7 +18,7 @@ RSpec.describe NotificationMailer do
 
     it "should be valid" do
       expect(mail.from).to have_content("owen.smith@shiftcommerce.com")
-      expect(mail.to).to have_content("test@test.com")
+      expect(mail.to).to have_content("test2@test.com")
     end
   end
 end
