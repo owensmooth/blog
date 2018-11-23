@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe NotificationMailer do
-  describe "Sending an email when new article created", type: :class do
+  describe "Sending an email when new article created" do
     let!(:notification) { create(:notification) }
     let(:article) { create(:article) }
     let(:mail) { NotificationMailer.notification_email() }
@@ -12,7 +12,7 @@ RSpec.describe NotificationMailer do
     end
   end
 
-    describe "Sending an email when new user signed up", type: :class do
+  describe "Sending an email when new user signed up" do
     let!(:notification) { create(:notification) }
     let(:mail) { NotificationMailer.signup_email(notification: notification) }
 

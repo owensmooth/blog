@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe NewPostService do
+RSpec.describe NewPostService, type: :mailer do
   describe "Sending an email to all users when new article created", type: :mailer do
     let(:article) { create(:article) }
     let!(:notification) { create(:notification) }

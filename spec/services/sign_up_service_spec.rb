@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe SignUpService do
+RSpec.describe SignUpService, type: :mailer do
   describe "Sending an email when signed up for notifications", type: :mailer do
     let!(:notification) { create(:notification) }
     let(:mail) {SignUpService.call(notification: notification) }
