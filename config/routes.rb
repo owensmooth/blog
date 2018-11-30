@@ -14,4 +14,7 @@ Rails.application.routes.draw do
   resources :notifications
 
   root "articles#index"
+
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
 end

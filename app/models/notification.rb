@@ -8,6 +8,8 @@ class Notification < ApplicationRecord
   after_create :send_notification
 
   def send_notification
+    puts self
+    puts "Notification Model"
     SignUpService.call(notification: self)
   end
 end

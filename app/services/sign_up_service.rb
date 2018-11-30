@@ -10,6 +10,8 @@ class SignUpService
   end
 
   def call
-    EmailWorker.perform.signup_email(notification: notification)
+    puts notification
+    puts "signupservice"
+    EmailWorker.perform_async(notification)
   end
 end
