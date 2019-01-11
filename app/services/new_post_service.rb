@@ -1,7 +1,4 @@
 class NewPostService
-  def initialize
-  end
-
   def self.call
     new.call
   end

@@ -4,7 +4,7 @@ RSpec.describe NotificationMailer, type: :mailer do
   describe "Sending an email when new article created" do
     let!(:notification) { create(:notification) }
     let(:article) { create(:article) }
-    let(:mail) { NotificationMailer.notification_email() }
+    let(:mail) { NotificationMailer.notification_email }
 
     it "should be valid" do
       expect(mail.from).to have_content("owen.smith@shiftcommerce.com")
