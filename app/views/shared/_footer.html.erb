@@ -2,7 +2,7 @@
   <div class="c-footer">
     <div class="c-footer__form">
       <h3 class="c-footer__form-header">Sign up for email notifications</h3>
-      <%= form_for :notification, url: notifications_path do |form| %>
+      <%= form_for @notification ||= Notification.new do |form| %>
         <div class="c-footer__form-notification-input">
           <span>
             <%= form.text_field :email, placeholder: "Enter email", class: "c-footer__form-input" %>

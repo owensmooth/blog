@@ -1,12 +1,12 @@
 FactoryBot.define do
   factory :user do
-    name {'test'}
-    email {'test@test.com'}
-    password {'password'}
-    password_confirmation {'password'}
+    name { Faker::Name.name }
+    email { Faker::Internet.free_email }
+    password { Faker::Internet.password }
+    password_confirmation { Faker::Internet.password }
   end
 
   factory :notification do
-    email {'test@test.com'}
+    sequence(:email) { |n| "test#{n}@test.com"}
   end
 end
